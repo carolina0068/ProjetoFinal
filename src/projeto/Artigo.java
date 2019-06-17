@@ -1,5 +1,10 @@
 package projeto;
 
+/**
+ * Esta classe serve para definir o artigo da encomenda a ser feita pelo cliente
+ * @author Luis Bispo, José Boieiro, Carolina Timóteo
+ *
+ */
 public class Artigo{
 	// ATRIBUTOS
 	protected int codigo_Artigo;
@@ -38,6 +43,15 @@ public class Artigo{
 		super();
 	}
 	
+	/**
+	 * Construtor de um artigo com o especifico código do mesmo, sua descrição, o preço
+	 * e o desconto.
+	 * @param codigo_Artigo serve para identificar o artigo em questão
+	 * @param descricao é uma breve explicação do que se trata o artigo
+	 * @param preco é o custo de inicio do artigo
+	 * @param desconto é o valor que poderá reduzir o preço do artigo
+	 */
+	
 	public Artigo(int codigo_Artigo, String descricao, int preco, double desconto) {
 		super();
 		this.codigo_Artigo = codigo_Artigo;
@@ -45,7 +59,11 @@ public class Artigo{
 		this.preco = preco;
 		this.desconto = desconto;
 	}
-
+	
+	/**
+	 * Devolve o preço real depois de calcular o preço do artigo com o desconto dado
+	 * @return Preço final
+	 */
 	// METODOS
 	public double calcularPrecoTotal() {
 		return preco * 1 - desconto; 	
